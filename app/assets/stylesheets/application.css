@@ -47,11 +47,11 @@ strong {
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 p, ol, ul, td {
@@ -82,7 +82,15 @@ tr {
 }
 
 th {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
+
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: center;
 }
 
 td {
