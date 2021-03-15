@@ -1,2 +1,24 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<!Doctype html>
+<html lang="ja">
+  <head>
+    <meta charest="UTF-8">
+    <title>Bookers</title>
+    <link rel="stylesheet" href="/bookers/app/assets/stylesheets/application.css">
+  </head>
+  <body>
+    <p id="notice">Book was successfully created.</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= @book.body %>
+    </p>
+    
+    <a href="#">Edit</a>
+    |
+    <a href="/books">Back</a>
+  </body>
+  
+</html>
