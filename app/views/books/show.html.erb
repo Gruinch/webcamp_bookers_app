@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="/bookers/app/assets/stylesheets/application.css">
   </head>
   <body>
-    <p id="notice">Book was successfully created.</p>
-    <p>
-      <strong>Title:</strong>
+    <% if flash[:notice] %>
+     <p id="notice">
+       <%= flash[:notice] %>
+     </p>
+    <% end %>    
+    <strong>Title:</strong>
       <%= @book.title %>
     </p>
     <p>
-      <strong>Body:</strong>
+    <strong>Body:</strong>
       <%= @book.body %>
     </p>
       <%= link_to"Edit", edit_book_path(@book) %>
     <a href="/books">Back</a>
   </body>
-  
+
 </html>
