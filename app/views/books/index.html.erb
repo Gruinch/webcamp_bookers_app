@@ -5,17 +5,24 @@
     <title>Bookers</title>
     <link rel="stylesheet" href="/bookers/app/assets/stylesheets/application.css">
   </head>
-<h1>Books</h1>
-<table>
-  <thread>
-   <tr>
-   <th>Title</th>
-   <th>Body</th>
-   <th colspan="3"></th>
-   </tr>
-   </thread>
+  <body>
+      <% if flash[:notice] %>
+     <p id="notice">
+      <%= flash[:notice] %>
+     </p>
+    <% end %> 
+
+    <h1>Books</h1>
+    <table>
+    <thread>
+      <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+      </tr>
+    </thread>
     <% @books.each do |book| %>
-  <tbody>
+    <tbody>
     <tr>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
@@ -42,4 +49,5 @@
 <div><%= f.submit 'create book' %></div>
 
 <% end %>
+</body>
 </html>
