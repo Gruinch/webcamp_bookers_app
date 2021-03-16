@@ -5,12 +5,14 @@
     <title>Bookers</title>
     <link rel="stylesheet" href="/bookers/app/assets/stylesheets/application.css">
   </head>
+  
   <body>
     <% if flash[:notice] %>
-     <p id="notice">
+     <p class="flash-message" id="notice">
        <%= flash[:notice] %>
      </p>
     <% end %> 
+    <p>
     <strong>Title:</strong>
       <%= @book.title %>
     </p>
@@ -18,7 +20,8 @@
     <strong>Body:</strong>
       <%= @book.body %>
     </p>
-      <%= link_to"Edit", edit_book_path(@book) %>
+    <%= link_to"Edit", edit_book_path(@book) %>
+    |
     <a href="/books">Back</a>
   </body>
 
